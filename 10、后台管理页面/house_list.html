@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+<title>活动搜索</title>
+<style type="text/css">
+ul,li,dl,dt,dd,p,span,img,h1,h2,h3,h4,a,input,form{ list-style:none; border:0; padding:0; margin:0; outline:none; font-weight:normal;}
+/*全局控制*/
+body{ padding:0; margin:0;background:url(images/body-bg.jpg) no-repeat top center; font-size:12px; color:#333; font-family:"思源黑体","微软雅黑","黑体";}
+.clear{ clear:both;}
+body{
+	font-family:"微软雅黑";
+	}
+form{
+	color:#333;
+	line-height:32px;
+	font-size:14px;
+	margin:0 auto;
+	width:1200px;
+	text-align:center;
+	}
+input{
+	font-size:14px;
+	line-height:30px;
+	color:#666;
+	border:1px #999 solid;
+	vertical-align:middle;
+	margin:10px 0;
+	}
+h1{
+	margin-bottom:20px;
+	font-family:"微软雅黑";
+	font-size:30px;
+	color:#333;
+	display:block;
+	text-align:center;
+	border-bottom:2px #F96 solid;
+	line-height:50px;
+	}
+form p {
+	color:#333;
+	display:inline-block;
+	width:100px;
+	font-size:16px;
+	line-height:31px;
+	text-align: right;
+}
+#search{
+	margin:0 auto;
+	width:200px;
+	height:40px;
+	border:1px #f90 solid;
+	background:#f90;
+	color:#fff;
+	line-height:30px;
+	margin:20px;
+	}
+#search:hover{
+	margin:0 auto;
+	width:200px;
+	height:40px;
+	border:1px #f90 solid;
+	background:#fff;
+	color:#f90;
+	line-height:30px;
+	margin:20px;
+	}
+
+#tb1 {
+	line-height:30px;
+	text-align:center;
+	width:1000px;
+	margin:0 auto;
+}
+#tr3 {
+	background-color:#ddd;
+	color:#f90;
+	font-size:14px;
+}
+#tr2 {
+	color:#bbb;
+	background-color:#eee;
+}
+#tr1{
+	background-color:#ddd;
+	color:#f90;
+	font-size:14px;
+	}
+#tr1 a{
+	background-color:#ddd;
+	color:#f90;
+	font-size:14px;
+	}
+#tr1 td{
+	background-color:#ddd;
+	color:#f90;
+	font-size:14px;
+	}
+ </style>
+ 	<script type="text/javascript" src="./My JSP 'zhanshi.jsp' starting page_files/jquery-1.7.1.min.js"></script>
+
+		<script type="text/javascript" src="./My JSP 'zhanshi.jsp' starting page_files/WdatePicker.js"></script>
+ 
+ <script type="text/javascript">
+       //上一页
+
+		function up()
+		{
+			var pageIndex=;
+			if(pageIndex>1){
+				--pageIndex;
+				document.getElementById("pages").value=pageIndex;
+		     document.fenye.submit();
+		     
+		     }
+		     }
+		//下一页
+
+	function down(){
+		var pageIndex=;
+		if(pageIndex < ){
+			++pageIndex;
+			document.getElementById("pages").value=pageIndex;
+		     document.fenye.submit();
+		}
+	}
+  </script>
+  </head>
+  
+  <body>
+    
+     <!--   <form action="activity/fenyechaxun.action">
+    <input type="submit" value="查询所有活动">
+    </form>-->
+                <h1>活动搜索</h1>
+    <form action="http://mission.czdev.com/mission/admin/fenyechaxun.action">
+<p>活动标题：</p><input type="text" name="title">
+<p>创建时间：</p><input type="text" name="createTime" id="input1" class="Wdate" onfocus="WdatePicker({dateFmt:&#39;yyyy-MM-dd &#39;})">
+<p>结束时间：</p><input type="text" name="endTime" id="input1" class="Wdate" onfocus="WdatePicker({dateFmt:&#39;yyyy-MM-dd &#39;})">
+<p>是否在线：</p><input name="isDisplay" type="radio" value="1" id="input2">是&nbsp;&nbsp;&nbsp;<input name="isDisplay" type="radio" value="2" checked="">否<br>
+  <input type="submit" value="搜索" id="search">
+ 
+  </form>
+     
+      <table id="tb1">
+    		<tbody><tr id="tr3">
+  				
+                <td>活动标题</td>
+                <td>类型</td>
+                <td>是否在线</td>
+                <td>创建时间</td>
+                <td>结束时间</td>
+                <td>产品名称</td>
+                <td>流量兑换数量</td>
+                <td>活动优先级</td>
+                <td>是否展示</td>
+                <td>操作</td>
+  			</tr>
+  			<tr id="tr1">
+  				<td colspan="13">
+  					<form name="fenye" action="http://mission.czdev.com/mission/admin/fenyechaxun.action" method="post">
+  					<input type="hidden" value="" name="title">
+  					<input type="hidden" value="" name="content">
+  					<input type="hidden" value="" name="imageUrl">
+  					<input type="hidden" value="" name="activityUrl">
+  					<input type="hidden" value="" name="type">
+  					<input type="hidden" value="" name="issure">
+  					<input type="hidden" value="" name="createTime">
+  					<input type="hidden" value="" name="endTime">
+  					<input type="hidden" value="" name="method">
+  					<input type="hidden" value="" name="conditions">
+  					<input type="hidden" value="" name="productName">
+  					<input type="hidden" value="" name="exchange">
+  					<input type="hidden" value="" name="recommend">
+  					<input type="hidden" value="" name="isDisplay">
+  					<input type="hidden" value="" name="pageIndex" id="pages">
+  					<a href="javascript:up();">上一页</a>
+  					当前页<font></font>
+  					<a href="javascript:down();">下一页</a>
+  					</form>
+  				</td>
+  			</tr>
+  			</tbody></table>

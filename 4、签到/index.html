@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="white" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<title>签到页面</title>
+<link href="css/home.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="text">
+	<h1>活动细则</h1>
+	<div id="txt">
+	活动标题：金融工厂感恩季，返现金+800M流量人性送送送</br>
+	活动概述:</br>
+	1.活动名称：金融工厂感恩季，返现+800M流量人性送送送</br>
+	2.活动时间：2015年12月10—2015年12月16日，注册送100M流向，单笔投资等于大于1000元，再送700M电信流量</br>
+	3.活动范围：全国电信</br>
+	4.活动文案：</br>
+	   新用户进入活动页面，完成金融工厂用户注册，赠送100M电信流量，新用户同时还可以获得120元返现券（具体使用，请看返现券使用规则）；活动期间用户完成1000元理财，可获得700M电信流量，金融工厂任性，萌萌哒~</br>
+	</div>
+	<div id="you">由&nbsp;&nbsp;加加流量&nbsp;&nbsp;提供技术支持</div>
+	<div id="over"><p>关闭</p></div>
+    </div>
+<header><img src="images/banner.png"></header>
+<section>
+	<div id="photo">
+    	<div id="photo_top">
+        	<div id="touxiang"><img src="images/photo.jpg"></div>
+        	<div id="name">用户昵称</div>
+            <div id="xize">活动细则></div>
+        </div>
+    	<div id="photo_down">
+        	<div id="photo_left">累计签到<span>24</span>天</div>
+        	<div id="photo_right">连续签到<span>7</span>天</div>
+        </div>
+    <div class="clear"></div>
+    </div>
+    <div id="middle">
+    <h1><span>143</span>M</h1>
+    <p>累计领取</p>
+    </div>
+    <div id="sign"><p>+10</p><h1>签&nbsp;&nbsp;&nbsp;&nbsp;到</h1></div>
+</section>
+<a href="tiqu.html"><footer>提取流量</footer></a>
+<script src="js/jquery-1.7.1.min.js"></script> 
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $('#sign').click(function(e) {
+        $('#sign').css({"background-color":"#bbb"})
+		$('#sign h1').text('已  签  到')
+		$('#sign p').css({"animation-play-state":"running"})
+    });
+	$('#xize').click(function(e) {
+        $('#text').fadeIn('slow');
+    });
+	$('#text p').click(function(e) {
+        $('#text').fadeOut('slow');
+    });
+});
+</script>
+</body>
+</html>

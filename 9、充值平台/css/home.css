@@ -1,0 +1,322 @@
+@charset "utf-8";
+*{
+	margin:0;
+	padding:0;
+	}
+* {
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight:normal;
+	}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+img {
+	border: none;
+}
+.clear{
+	clear:both;
+	}
+body{
+	font-family:"微软雅黑";
+	}
+header{
+	text-align:center;
+	width:70%;
+	height:34px;
+	margin:0 auto;
+	border:1px #3ba485 solid;
+	border-radius:5px;
+	margin-top:20px;
+	margin-bottom:30px;
+	overflow:hidden;
+	}
+header p{
+	float:left;
+	width:50%;
+	line-height:34px;
+	font-size:14px;
+	}
+#liuliang{
+	background:#3ba485;
+	color:#fff;
+	}
+#huafei{
+	background:#fff;
+	color:#3ba485;
+	}
+form{
+	width:80%;
+	margin:0 auto;
+	border:1px #999 solid;
+	padding-left:2%;
+	border-radius:5px;
+	overflow:hidden;
+	margin-bottom:10px;
+	}
+input{
+	vertical-align:top;
+	height:44px;
+	line-height:44px;
+	font-size:14px;
+	color:#333;
+	outline:none;
+	}
+#phone{
+	border:0;
+	width:85%;
+	}
+#out{
+	display:inline-block;
+	font-size:12px;
+	line-height:26px;
+	color:#fb4646;
+	padding:5px;
+	border:1px #fb4646 solid;
+	border-radius:2px;
+	margin-left:9%;
+	}
+#btn{
+	width:15%;
+	border:0;
+	background:#fff url(../images/close_03.png) no-repeat center center;
+	background-size:50%;
+	}
+#tickt{
+	width:95%;
+	margin:0 auto;
+	margin-top:30px;
+	}
+#tickt ul{
+	display:inline-block;
+	width:100%;
+	margin:0 auto;
+	}
+#tickt li{
+	background:#fff;
+	margin-bottom:10px;
+	text-align:center;
+	display:inline-block;
+	width:25%;
+	float:left;
+	border:1px #3ba485 solid;
+	border-radius:5px;
+	padding:0 2%;
+	}
+#tickt li h2{
+	color:#3ba485;
+	line-height:40px;
+	font-size:16px;
+	}
+#tickt li p{
+	border-top:1px #3ba485 dotted;
+	line-height:28px;
+	color:#83ccb6;
+	font-size:11px;
+	}
+#tickt .change{
+	background:#3ba485;
+	margin-bottom:10px;
+	text-align:center;
+	display:inline-block;
+	width:25%;
+	float:left;
+	border:1px #3ba485 solid;
+	border-radius:5px;
+	padding:0 2%;
+	}
+#tickt .change h2{
+	color:#fff;
+	line-height:40px;
+	font-size:16px;
+	}
+#tickt .change p{
+	border-top:1px #fff dotted;
+	line-height:28px;
+	color:#fff;
+	font-size:11px;
+	}
+#down li:nth-child(2){
+	margin:0 5%;
+	}
+#tickt2{
+	width:95%;
+	margin:0 auto;
+	margin-top:30px;
+	}
+#tickt2 ul{
+	display:inline-block;
+	width:100%;
+	margin:0 auto;
+	}
+#tickt2 li{
+	background:#fff;
+	margin-bottom:10px;
+	text-align:center;
+	display:inline-block;
+	width:25%;
+	float:left;
+	border:1px #3ba485 solid;
+	border-radius:5px;
+	padding:0 2%;
+	}
+#tickt2 li h2{
+	color:#3ba485;
+	line-height:40px;
+	font-size:16px;
+	}
+#tishi{
+	display:inline-block;
+	font-size:12px;
+	color:#888;
+	padding:0 10px;
+	line-height:18px;
+	}
+#service{
+	width:90%;
+	margin:10px 0;
+	display:inline-block;
+	font-size:12px;
+	color:#444;
+	padding:0 10px;
+	line-height:18px;
+	}
+#word{
+	display:block;
+	width:60px;
+	padding-right:10px;
+	background:url(../images/fuwu_03.png) no-repeat center right;
+	background-size:contain;
+	}
+#xize{
+	display:none;
+	}
+#word2{
+	display:block;
+	width:60px;
+	padding-right:10px;
+	background:url(../images/fuwu_03.png) no-repeat center right;
+	background-size:contain;
+	}
+#xize2{
+	display:none;
+	}
+#section2{
+	display:none;
+	}
+footer{
+	margin-top:20px;
+	text-align:center;
+	font-size:14px;
+	color:#444;
+	line-height:20px;
+	}
+footer a{
+	color:#3ba485;
+	}
+#search{
+	text-decoration:underline;
+	}
+#last{
+	text-align:center;
+	width:100%;
+	height:50px;
+	line-height:50px;
+	font-size:20px;
+	color:#fff;
+	background:rgba(59,164,133,0.9);
+	position:fixed;
+	bottom:0;
+	left:0;
+	}
+#bot{
+	width:100%;
+	height:60px;
+	}
+#zhezhao{
+	display:none;
+	width:100%;
+	height:100%;
+	background:rgba(255,255,255,0.95);
+	position:fixed;
+	top:0;
+	left:0;
+	}
+#back{
+	position:fixed;
+	top:5%;
+	left:5%;
+	width:30px;
+	height:30px;
+	}
+#back img{
+	width:100%;
+	}
+#pay{
+	margin-top:100px;
+	padding:0 20px;
+	}
+#pay li{
+	width:90%;
+	margin:0 auto;
+	border-bottom:1px #ccc solid;
+	height:40px;
+	padding:15px;
+	background:url(../images/nike1.png) no-repeat right center
+	}
+#pay .green{
+	background:url(../images/nike2.png) no-repeat right center
+	}
+#pay li:first-child{
+	background:none;
+	}
+#pay li p{
+	color:#444;
+	width:60%;
+	font-size:16px;
+	line-height:40px;
+	text-align:center;
+	}
+#pay #timu{
+	display:inline-block;
+	width:60%;
+	text-align:left;
+	line-height:60px;
+	font-size:16px;
+	}
+#pay #money{
+	display:inline-block;
+	width:40%;
+	text-align:right;
+	line-height:60px;
+	color:#F60;
+	}
+#pic{
+	width:40px;
+	height:40px;
+	float:left;
+	display:inline-table;
+	}
+#pic img{
+	display:inline-block;
+	width:100%;
+	}
+#last2{
+	text-align:center;
+	width:100%;
+	height:50px;
+	line-height:50px;
+	font-size:20px;
+	color:#fff;
+	background:rgba(59,164,133,0.9);
+	position:fixed;
+	bottom:0;
+	left:0;
+	}
+/* CSS Document */
+

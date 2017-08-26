@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>记录查询</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+		<meta http-equiv="description" content="This is my page">
+		<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+		<script type="text/javascript" src="./My JSP 'count.jsp' starting page_files/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="./My JSP 'count.jsp' starting page_files/calendar.js"></script>
+		<script type="text/javascript" src="./My JSP 'count.jsp' starting page_files/WdatePicker.js"></script>
+        <link href="./My JSP 'count.jsp' starting page_files/WdatePicker.css" rel="stylesheet" type="text/css">
+			<script type="text/javascript">
+  </script>
+
+		<style type="text/css">
+ul,li,dl,dt,dd,p,span,img,h1,h2,h3,h4,a,input,form{ list-style:none; border:0; padding:0; margin:0; outline:none; font-weight:normal;}
+/*全局控制*/
+body{ padding:0; margin:0;background:url(images/body-bg.jpg) no-repeat top center; font-size:12px; color:#333; font-family:"思源黑体","微软雅黑","黑体";}
+.clear{ clear:both;}
+body{
+	font-family:"微软雅黑";
+	}
+form{
+	color:#333;
+	line-height:32px;
+	font-size:16px;
+	width:100%;
+	text-align:center;
+	margin:0 auto;
+	margin-bottom:30px;
+	}
+input{
+	font-size:14px;
+	line-height:30px;
+	color:#666;
+	border:1px #999 solid;
+	vertical-align:middle;
+	}
+#input1{
+	background:#eee;
+	height:28px;
+	}
+#search{
+	width:100px;
+	height:32px;
+	border:1px #f90 solid;
+	background:#f90;
+	color:#fff;
+	}
+#search:hover{
+	border:1px #f90 solid;
+	background:#fff;
+	color:#f90;
+	}
+select{
+	color:#666;
+	border:1px #999 solid;
+	background:#eee;
+	height:32px;
+	}
+h1{
+	margin-bottom:20px;
+	font-family:"微软雅黑";
+	font-size:30px;
+	color:#333;
+	display:block;
+	text-align:center;
+	border-bottom:2px #F96 solid;
+	line-height:50px;
+	}
+#tb1 {
+	line-height:30px;
+	text-align:center;
+	width:1000px;
+	margin:0 auto;
+}
+#tr1 {
+	background-color:#ddd;
+	color:#f90;
+	font-size:14px;
+}
+#tr2 {
+	color:#bbb;
+	background-color:#eee;
+}
+</style>
+
+	</head>
+
+	<body>
+                <h1>记录查询</h1>
+		<form action="house_edit.html">
+			起始时间：
+			<input name="createTime" id="input1" class="Wdate" onfocus="WdatePicker({dateFmt:&#39;yyyy-MM-dd HH:mm:ss&#39;})">
+            结束时间：<input name="endTime" id="input1" class="Wdate" onfocus="WdatePicker({dateFmt:&#39;yyyy-MM-dd HH:mm:ss&#39;})">
+            活动：<select type="text" name="activity_id">
+				<option style="width: 100px" value="0">请选择活动</option>
+				<option style="width: 100px" value="33">
+					喝法式玫瑰花茶拿1000M流量
+				</option>
+				<option style="width: 100px" value="34">
+					爱国者移动电源情侣版-爱心流量送送送
+				</option>
+				<option style="width: 100px" value="35">
+					苏泊尔电火锅大容量不粘锅
+				</option>
+				<option style="width: 100px" value="37">
+					理财团APP参与最高可获550M
+				</option>
+			</select>
+			渠道商：
+			<select type="text" name="channelid">
+				<option style="width: 100px" value="60000001">
+					60000001
+				</option>
+				<option style="width: 100px" value="1">
+					1
+				</option>
+				<option style="width: 100px" value="2">
+					2
+				</option>
+				<option style="width: 100px" value="3">
+					3
+				</option>
+				<option style="width: 100px" value="4">
+					4
+					</option>
+			</select>
+			<input type="submit" value="查&nbsp;&nbsp;询" id="search">
+		</form>
+		<table id="tb1">
+                        <tr style="background:#ddd;font-weight:bold; color:#5e5e5e; border: 1px solid #000; width:100%;" id="tr1">
+                            <td style="width:30%; height:36px;border-top:0px;">时&nbsp;间</td>
+                            <td style="width:15%; height:36px;border-top:0px;">P&nbsp;V</td>
+                            <td style="width:15%; height:36px;border-top:0px;">U&nbsp;V</td>
+                        </tr>			
+	
+</tbody></table>
+</body>
+</html>

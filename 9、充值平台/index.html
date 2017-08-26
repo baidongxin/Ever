@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="white" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<title>充值平台</title>
+<link href="css/home.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+	//切换按钮
+    $('#liuliang').click(function(e){
+    	$('header p').css({"background-color":"#fff","color":"#3ba485"});
+		$('#liuliang').css({"background-color":"#3ba485","color":"#fff"});
+		$('#section1').show();
+		$('#section2').hide();
+    });
+    $('#huafei').click(function(e){
+		$('header p').css({"background-color":"#fff","color":"#3ba485"});
+		$('#huafei').css({"background-color":"#3ba485","color":"#fff"});
+		$('#section2').show();
+		$('#section1').hide();
+    });
+	//服务说明展开收起
+    $('#word').click(function(e){
+		$('#xize').toggle();
+    });
+    $('#word2').click(function(e){
+		$('#xize2').toggle();
+    });
+    $('#btn').click(function(e){
+		$('#phone').attr("value","");
+    });
+	$('#tickt li').click(function(e) {
+        $('#tickt li').removeClass();
+		$(this).addClass("change");
+    });
+});
+	//限定input输入字数
+		function isNotMax(oinput){
+		if( oinput.value.length >oinput.getAttribute("maxlength")){
+		return oinput.value.substring(0,oinut.getAttribute("maxlength"));
+		}else{
+		return oinput.value;
+		}
+		}
+	//支付图标对号变绿色
+	$(document).ready(function(e) {
+        $('#pay>li').click(function(e) {
+			$('#pay>li').removeClass();
+            $(this).addClass("green");
+        });
+	//点击立即充值弹出遮罩
+		$('#last').click(function(e) {
+            $('#zhezhao').slideDown();
+        });
+	//点击关闭按钮返回充值页面
+		$('#back').click(function(e) {
+            $('#zhezhao').slideUp();
+        });
+    });
+</script>
+</head>
+<body>
+<header><p id="liuliang">流量充值</p><p id="huafei">话费充值</p></header>
+<div id="section1">
+<form id="top"><input type="tel" placeholder="请输入手机号码" id="phone" maxlength="11"><input type="button" id="btn"/></form>
+<div id="out">请输入正确手机号码</div>
+<div id="tickt">
+    <ul id="down">
+    	<li><h2>10M</h2><p>售价：1.76</p></li>
+    	<li><h2>30M</h2><p>售价：4.4</p></li>
+    	<li><h2>50M</h2><p>售价：6.16</p></li>
+    </ul>
+    <ul id="down">
+    	<li><h2>100M</h2><p>售价：8.8</p></li>
+    	<li><h2>200M</h2><p>售价：13.2</p></li>
+    	<li><h2>500M</h2><p>售价：26.4</p></li>
+    </ul>
+    <ul id="down">
+    	<li><h2>1G</h2><p>售价：44</p></li>
+    </ul>
+</div>
+<div id="tickt2">
+    <ul id="down">
+    	<li><h2>10M</h2></li>
+    	<li><h2>30M</h2></li>
+    	<li><h2>50M</h2></li>
+    </ul>
+    <ul id="down">
+    	<li><h2>100M</h2></li>
+    	<li><h2>200M</h2></li>
+    	<li><h2>500M</h2></li>
+    </ul>
+    <ul id="down">
+    	<li><h2>1G</h2></li>
+    </ul>
+</div>
+<div id="tishi">*全国流量，即时生效，月底失效。</div>
+<div id="service"><p id="word">服务说明</p><p id="xize">1.活动名称：金融工厂感恩季，返现+800M流量人性送送送</br>
+2.活动时间：2015年12月10—2015年12月16日</br>
+3.活动范围：全国电信</br>
+</p></div>
+</div>
+<div id="section2">
+<form id="top"><input type="tel" placeholder="请输入手机号码" id="phone" name="phone" maxlength="11"><input type="button" id="btn" onclick="document.getElementById('phone').value = '';" /></form>
+<div id="out">请输入正确手机号码</div>
+<div id="tickt">
+    <ul id="down">
+    	<li><h2>10元</h2><p>售价：10元</p></li>
+    	<li><h2>20元</h2><p>售价：20元</p></li>
+    	<li><h2>30元</h2><p>售价：30元</p></li>
+    </ul>
+    <ul id="down">
+    	<li><h2>50元</h2><p>售价：50元</p></li>
+    	<li><h2>100元</h2><p>售价：100元</p></li>
+    	<li><h2>200元</h2><p>售价：200元</p></li>
+    </ul>
+    <ul id="down">
+    	<li><h2>300元</h2><p>售价：300元</p></li>
+    	<li><h2>500</h2><p>售价：500元</p></li>
+    </ul>
+    </div>
+<div id="tickt2">
+    <ul id="down">
+    	<li><h2>10元</h2></li>
+    	<li><h2>30元</h2></li>
+    	<li><h2>50元</h2></li>
+    </ul>
+    <ul id="down">
+    	<li><h2>100M</h2></li>
+    	<li><h2>200M</h2></li>
+    	<li><h2>500M</h2></li>
+    </ul>
+    <ul id="down">
+    	<li><h2>1G</h2></li>
+    </ul>
+</div>
+
+<div id="service"><p id="word2">服务说明</p><p id="xize2">1.活动名称：金融工厂感恩季，返现+800M流量人性送送送</br>
+2.活动时间：2015年12月10—2015年12月16日</br>
+3.活动范围：全国电信</br>
+</p></div>
+</div>
+<footer><p>客服电话：<a href="tel:4006-000-843">4006-000-843</a></p><a id="search" href="jilu1.html"><p>充值记录查询</p></a></footer>
+<div id="last">立即充值</div>
+<div id="bot"></div>
+<div id="zhezhao">
+    <div id="back"><img src=""></div>
+	<ul id="pay">
+    	<li><p id="timu">请选择支付方式</p><span id="money">总计：70元</span></li>
+    	<li><div id="pic"><img src="images/wechat.jpg"></div><p>微信支付</p></li>
+    	<li><div id="pic"><img src="images/alipay.jpg"></div><p>支付宝</p></li>
+    	<li><div id="pic"><img src="images/baidu.jpg"></div><p>百度钱包</p></li>
+    </ul>
+    <div class="clear"></div>
+<div id="last2">确认支付</div>
+</div>
+</body>
+</html>

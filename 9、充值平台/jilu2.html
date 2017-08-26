@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="white" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<title>提取记录</title>
+<link href="css/last2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/pullToRefresh.css"/>
+<script src="js/iscroll.js"></script>
+<script src="js/pullToRefresh.js"></script>
+<script src="js/jquery-1.7.1.min.js"></script> 
+<script type="text/javascript">
+	$(document).ready(function(e) {
+	//切换按钮
+    $('#liuliang').click(function(e){
+    	$('header p').css({"background-color":"#fff","color":"#3ba485"});
+		$('#liuliang').css({"background-color":"#3ba485","color":"#fff"});
+		$('#section1').show();
+		$('#section2').hide();
+    });
+    $('#huafei').click(function(e){
+		$('header p').css({"background-color":"#fff","color":"#3ba485"});
+		$('#huafei').css({"background-color":"#3ba485","color":"#fff"});
+		$('#section2').show();
+		$('#section1').hide();
+    });
+	})
+</script>
+</head>
+
+<body>
+<div id="up">
+<div id="back"><a href="index.html"><img src="images/back_03.png"></a></div>
+<header><a href="jilu1.html"><p id="liuliang">流量充值</p></a><p id="huafei">话费充值</p></header></div>
+<!--must content ul li,or shoupi-->
+<div id="section1">
+<section>
+<div id="wrapper">
+<ul>
+	<li>
+    	<div id="left">01-15</div>
+        <div id="logo"><div><img src="images/logo1.png"></div></div>
+        <div id="mid">充值数量</div>
+        <div id="right">充值成功</div>
+    </li>
+	<li>
+    	<div id="left">01-15</div>
+        <div id="logo"><div><img src="images/logo1.png"></div></div>
+        <div id="mid">充值数量</div>
+        <div id="right">充值成功</div>
+    </li>
+	<li>
+    	<div id="left">01-15</div>
+        <div id="logo"><div><img src="images/logo1.png"></div></div>
+        <div id="mid">充值数量</div>
+        <div id="right">充值成功</div>
+    </li>
+	<li>
+    	<div id="left">01-15</div>
+        <div id="logo"><div><img src="images/logo1.png"></div></div>
+        <div id="mid">充值数量</div>
+        <div id="right">充值成功</div>
+    </li>
+	<li>
+    	<div id="left">01-15</div>
+        <div id="logo"><div><img src="images/logo1.png"></div></div>
+        <div id="mid">充值数量</div>
+        <div id="right">充值成功</div>
+    </li>
+	<li>
+    	<div id="left">01-15</div>
+        <div id="logo"><div><img src="images/logo1.png"></div></div>
+        <div id="mid">充值数量</div>
+        <div id="right">充值成功</div>
+    </li>
+</ul>
+</div>
+<div class="clear"></div>
+</section>
+</div>
+<div id="section2">
+<section>
+<div id="wrapper">
+<ul>
+	<li>
+    	<div id="left">01-15</div>
+        <div id="logo"><div><img src="images/logo1.png"></div></div>
+        <div id="mid">充值数量</div>
+        <div id="right">充值成功</div>
+    </li>
+	<li>
+    	<div id="left">01-15</div>
+        <div id="logo"><div><img src="images/logo1.png"></div></div>
+        <div id="mid">充值数量</div>
+        <div id="right">充值成功</div>
+    </li>
+	<li>
+    	<div id="left">01-15</div>
+        <div id="logo"><div><img src="images/logo1.png"></div></div>
+        <div id="mid">充值数量</div>
+        <div id="right">充值成功</div>
+    </li>
+	<li>
+    	<div id="left">01-15</div>
+        <div id="logo"><div><img src="images/logo1.png"></div></div>
+        <div id="mid">充值数量</div>
+        <div id="right">充值成功</div>
+    </li>
+	<li>
+    	<div id="left">01-15</div>
+        <div id="logo"><div><img src="images/logo1.png"></div></div>
+        <div id="mid">充值数量</div>
+        <div id="right">充值成功</div>
+    </li>
+</ul>
+</div>
+<div class="clear"></div>
+</section>
+</div>
+<script>
+	refresher.init({
+		id:"wrapper",
+		pullDownAction:Refresh,                                                            
+		pullUpAction:Load 																			
+		});																																							
+	function Refresh() {																
+		setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
+			var el, li, i;																		
+			el =document.querySelector("#wrapper ul");					
+			//这里写你的刷新代码				
+			document.getElementById("wrapper").querySelector(".pullDownIcon").style.display="none";		
+			document.getElementById("wrapper").querySelector(".pullDownLabel").innerHTML="刷新成功";																					 
+			setTimeout(function () {
+				wrapper.refresh();
+				document.getElementById("wrapper").querySelector(".pullDownLabel").innerHTML="";								
+				},1000);//下拉刷新显示成功效果
+			/****remember to refresh after  action completed！ ---yourId.refresh(); ----| ****/
+		}, 1000);
+	}
+	function Load() {
+		setTimeout(function () {// <-- Simulate network congestion, remove setTimeout from production!
+			var el, li, i;
+			el =document.querySelector("#wrapper ul");
+			for (i=0; i<10; i++) {
+				li = document.createElement('li');
+				li.innerHTML="<div id='left'>01-15</div><div id='logo'><div><img src='images/logo1.png'></div></div><div id='mid'>充值数量</div><div id='right'>充值成功</div>"
+				el.appendChild(li, el.childNodes[0]);
+			}
+			wrapper.refresh();/****remember to refresh after action completed！！！   ---id.refresh(); --- ****/
+		},1000);	
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="white" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<title>提取成功</title>
+<link href="css/chenggong.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(e) {
+        $('#btn1').click(function(e) {
+            $('#share').fadeIn();
+        });
+        $('#close').click(function(e) {
+            $('#share').fadeOut();
+        });
+    });
+</script> 
+</head>
+
+<body>
+<header><img src="images/nike_03.png"></header>
+<div id="top">恭喜您</div>
+<section>
+	<p>成功充值由<span>加加流量</span></p>
+	<p>为您提供的</p>
+	<p><span>50M</span>全国流量数据包</p>
+</section>
+	<form id="tiqu"><input type="button" value="分享给朋友" class="btn" id="btn1"><input type="button" name="Submit" value="继续充值" class="btn" onclick="location.href='index.html'"></form>
+<div id="share"><img src="images/close_03.png" id="close" width="50" height="50"><img src="images/zhezhao.png"></div>
+</body>
+</html>

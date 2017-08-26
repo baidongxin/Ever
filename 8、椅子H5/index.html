@@ -1,0 +1,606 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/> 
+<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+<meta HTTP-EQUIV="expires" CONTENT="0">
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta http-equiv="Expires" content="-1" />
+<meta http-equiv="pragram" content="no-cache" />
+<title>上坐</title>
+<script src="js/1/jquery-1.7.2.min.js" language="javascript" type="text/javascript"></script>
+<script src="js/1/plugins.js" language="javascript" type="text/javascript"></script>
+<script src="js/1/main.js" language="javascript" type="text/javascript"></script>
+<script src="js/1/snowfall.jquery.js" language="javascript" type="text/javascript"></script>
+<script language="javascript" src="js/1/jquery.lazyload.js"></script>
+<script language="javascript" src="js/1/jquery.tabs.js"></script>
+<script language="javascript" src="js/1/lanrenzhijia.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/app.css"/>
+<link rel="stylesheet" type="text/css" href="css/animation.css"/>
+<link rel="stylesheet" type="text/css" href="css/units.css"/>
+<link rel="stylesheet" type="text/css" href="css/modules.css"/>
+<link rel="stylesheet" type="text/css" href="css/page.css"/>
+<link rel="stylesheet" type="text/css" href="css/play.css"/>
+<style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+	.loader{position:absolute;z-index:9999;width:100%;height:100%;background:#ccc;}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+<script>
+$(window).load(function(){
+	$(".loader").animate({opacity:0,top:0},2000,function(){
+					$(this).css({display:"none"});
+				}
+				);
+	
+	start_banner()
+     
+        $(".page1").snowfall({
+            image: "images/yu.png",
+            flakeCount:60,
+            minSize: 1,
+            maxSize: 50
+        });
+	
+	});
+function start_banner(){
+	$("#logo").css({opacity:0});
+	$("#page1").css({opacity:0});
+	$("#page1").delay(1000).animate({opacity:1},3000);
+	$("#logo").show().delay(2500).animate({opacity:1},5000);
+		
+}
+
+	
+	if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
+		var version = parseFloat(RegExp.$1);
+		if(version>2.3){
+			var phoneScale = parseInt(window.screen.width)/640;
+			document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+		}else{
+			document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+		}
+	}else{
+		document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	}
+	//微信去掉下方刷新栏
+	if(navigator.userAgent.indexOf('MicroMessenger') >= 0){
+		document.addEventListener('WeixinJSBridgeReady', function() {
+			//WeixinJSBridge.call('hideToolbar');
+		});
+	}
+</script>
+</head>
+
+<body class="app">
+<!--<div class="loader">
+<div class="spinner">
+    <div class="cube1"></div>
+    <div class="cube2"></div>
+  </div>
+</div> 
+<header class="app-header">
+<a href="javascript:void(0);" class="u-globalAudio">
+<i class="icon-music"></i>
+<audio src="audio/music.mp3"  loop></audio>
+</a>
+</header>-->
+<section class="app-content">
+    <section class="page page-index z-current page1" data-plugin-type="info_front" id="page1">
+      <section class="page-content">
+        <p id="logo"><img src="images/LOGO.png" alt=""></p>
+      </section>
+    </section>
+    
+    <section class="page page-link page2" data-plugin-type="info_link" style="">
+      <section class="page-content">
+      <ol class="nav">
+        <li><a href="javascript:void(0)"></a></li>
+        <li><a href="javascript:void(0)"></a></li>
+        
+        <li><a href="javascript:void(0)"></a></li>
+      </ol>
+      </section>
+    </section>
+    <section class="page page-link page2 page3" data-plugin-type="info_link" style="">
+      <section class="page-content">
+        <p class="logo">
+          <img src="images/logo2.png" alt="" style="display:none">
+          <img src="images/logo1.png" alt="">
+        </p>
+        <div class="img">
+          <img src="images/page3_zi.png" alt="">
+          <img src="images/page3_img.png" alt="">
+        </div>
+        <ol class="nav">
+          <li><a href="javascript:void(0)"></a></li>
+          <li><a href="javascript:void(0)"></a></li>
+          <li><a href="javascript:void(0)"></a></li>
+        </ol>
+      </section>
+    </section>
+    <section class="page page-link page2 page4" data-plugin-type="info_link" style="">
+      <section class="page-content">
+        <img src="images/page4_bg.jpg" alt="">
+      </section>
+    </section>
+    <section class="page page-link page2 page5" data-plugin-type="info_link" style="background:#f9f7f0">
+      <section class="page-content">
+        <p class="logo">
+          <img src="images/logo2.png" alt="">
+          <img src="images/logo1.png" alt="">
+        </p>
+        <img src="images/gif.gif" alt="" class="gif">
+        <ol class="nav">
+          <li><a href="javascript:void(0)"></a></li>
+          <li><a href="javascript:void(0)"></a></li>
+          <li><a href="javascript:void(0)"></a></li>
+        </ol>
+      </section>
+    </section>
+    <section class="page page-link page2 page6" data-plugin-type="info_link" style="">
+      <section class="page-content">
+        <p class="logo">
+          <img src="images/logo2.png" alt="">
+          <img src="images/logo1.png" alt="">
+        </p>
+        <div class="box demo2">
+          <ul class="tab_menu anli_tab">
+            <li class="current"></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <div class="tab_box">
+            <div>
+              <p><img src="images/page6_img1.jpg" alt=""></p>
+            </div>
+            <div class="hide">
+              <p><img src="images/page6_img2.jpg" alt=""></p>
+            </div>
+          </div>
+        </div>
+        <ol class="nav">
+          <li><a href="javascript:void(0)"></a></li>
+          <li><a href="javascript:void(0)"></a></li>
+          <li><a href="javascript:void(0)"></a></li>
+        </ol>
+      </section>
+    </section>
+    <section class="page page-link page2 page7" data-plugin-type="info_link" style="">
+      <section class="page-content">
+        <p class="logo">
+          <img src="images/logo2.png" alt="">
+          <img src="images/logo1.png" alt="">
+        </p>
+        <div>
+          <p><img src="images/page7_zi.png" alt=""></p>
+          <p><img src="images/page7_img.png" alt=""></p>
+        </div>
+        <ol class="nav">
+          <li><a href="javascript:void(0)"></a></li>
+          <li><a href="javascript:void(0)"></a></li>
+          <li><a href="javascript:void(0)"></a></li>
+        </ol>
+      </section>
+    </section>
+    <section class="page page-teletext page2" data-plugin-type="info_list" style="background:url(images/appBg2.jpg);">
+    
+      <section class="page-content">
+      <ol class="nav">
+          <li><a href="javascript:void(0)"></a></li>
+          <li><a href="javascript:void(0)"></a></li>
+          <li><a href="javascript:void(0)"></a></li>
+        </ol>
+        <ul class="m-cascadingTeletext">
+        <li>
+        <p><img src="images/page8_img1.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li>
+        <li>
+        <p><img src="images/page8_img2.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li>
+        <li>
+        <p><img src="images/page8_img3.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li>
+        <li>
+        <p><img src="images/page8_img4.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li>
+        <li>
+        <p><img src="images/page8_img5.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li>
+        <li>
+        <p><img src="images/page8_img6.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li>
+        <li>
+        <p><img src="images/page8_img1.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li>
+        <li>
+        <p><img src="images/page8_img2.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li><li>
+        <p><img src="images/page8_img3.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li>
+        <li>
+        <p><img src="images/page8_img4.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li>
+        </ul>
+        <a href="javascript:void(0);" class="u-guidePrev z-move">prev</a>
+        <a href="javascript:void(0);" class="u-guideNext z-move">next</a>
+        <ol class="nav">
+          <li><a href="javascript:void(0)"></a></li>
+          <li><a href="javascript:void(0)"></a></li>
+          <li><a href="javascript:void(0)"></a></li>
+        </ol>
+      </section>
+    </section>
+    <section class="page page-teletext page9" data-plugin-type="info_list" style="background:url(images/appBg2.jpg);">
+      <section class="page-content">
+        <ul class="m-cascadingTeletext">
+        <li>
+        <p>
+        <a href="javascript:void(0)"></a>
+        <img src="images/page9_img1.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li>
+        <li>
+        <p>
+        <a href="javascript:void(0)"></a>
+        <img src="images/page9_img2.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li>
+        <li>
+        <p>
+        <a href="javascript:void(0)"></a>
+        <img src="images/page9_img3.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li>
+        <li>
+        <p>
+        <a href="javascript:void(0)"></a>
+        <img src="images/page9_img4.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li>
+        <li>
+        <p>
+        <a href="javascript:void(0)"></a>
+        <img src="images/page9_img1.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li>
+        <li>
+        <p>
+        <a href="javascript:void(0)"></a>
+        <img src="images/page9_img2.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li>
+        <li>
+        <p>
+        <a href="javascript:void(0)"></a>
+        <img src="images/page9_img3.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li>
+        <li>
+        <p>
+        <a href="javascript:void(0)"></a>
+        <img src="images/page9_img4.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li>
+        <li>
+        <p>
+        <a href="javascript:void(0)"></a>
+        <img src="images/page9_img1.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li>
+        <li>
+        <p>
+        <a href="javascript:void(0)"></a>
+        <img src="images/page9_img2.jpg"/></p>
+        <div class="imgText">
+        </div>
+        </li>
+        </ul>
+        <a href="javascript:void(0);" class="u-guidePrev z-move">prev</a>
+        <a href="javascript:void(0);" class="u-guideNext z-move">next</a>
+      </section>
+    </section>
+    <section class="page page-link page2 page10" data-plugin-type="info_link" style="">
+      <section class="page-content">
+        <p id="page10"  onClick="playPause()">
+          <img src="images/page10_zi.png" alt="">
+          <span></span>
+        </p>
+        <video id="video1" src="audio/video1.mp4">
+        </video>
+      </section>
+    </section>
+    <section class="page page-link page2 page11" data-plugin-type="info_link" style="">
+      <section class="page-content">
+        <p><img src="images/page11_logo.png" alt=""></p>
+        <p class="map_btn1"><img src="images/page11_zi1.png" alt=""><img src="images/addr.png" alt=""></p>
+        <p><img src="images/page11_img1.jpg" alt=""></p>
+        <p><a href="javascript:void(0)">北京市东四十22号/条皇家粮仓</a></p>
+        <p><a href="javascript:void(0)">开馆时间11：00-19：30</a></p>
+        <p><a href="tel:010-64096477">客服电话010-64096477/64096499</a></p>
+        <p><a href="tel:13701378636">移动电话13701378636</a></p>
+      </section>
+    </section>
+    <section class="page page-link page11 page12" data-plugin-type="info_link" style="">
+      <section class="page-content">
+        <p style="margin-bottom:20px"><img src="images/page12_logo.png" alt=""></p>
+        <p class="map_btn2"><img src="images/page12_zi1.png" alt=""><img src="images/addr.png" alt="" ></p>
+        <p><img src="images/page12_img1.jpg" alt=""></p>
+        <p><a href="javascript:void(0)">北京市酒仙桥路2号B01-1/798创意广场南楼</a></p>
+        <p><a href="javascript:void(0)">开馆时间11：00-19：30</a></p>
+        <p><a href="tel:010-64096477">客服电话010-59789977</a></p>
+        <p><a href="tel:13701378636">移动电话13701378636</a></p>
+      </section>
+    </section>
+    <section class="page page-link page11" data-plugin-type="info_link" style="text-align:center">
+      <section class="page-content">
+        <img src="images/page13_bg.png" alt="" style="width:80%;">
+      </section>
+    </section>
+    <section class="page page-link page11" data-plugin-type="info_link" style="text-align:center">
+      <section class="page-content">
+        <img src="images/page14_img1.jpg" alt="" style="width:100%;">
+      </section>
+    </section>
+</div>
+</div>
+<div style="width:100%;height:500px;border:#ccc solid 1px;display:none;position:absolute;bottom:0;z-index:98" id="dituContent1" class="map1"></div>
+<div style="width:100%;height:500px;border:#ccc solid 1px;display:none;position:absolute;bottom:0;z-index:99" id="dituContent2" class="map2"></div>
+<script type="text/javascript" src="js/sea.js"></script>
+<script>
+var myVideo=document.getElementById("video1");
+var page=document.getElementById("page10");
+function playPause() { 
+  myVideo.play(); 
+  page.style.display="none";
+  }
+
+
+  var assetsVersion = '3.7';
+		seajs.config({
+			map: [
+				[ /^(.*\.(?:css|js))(.*)$/i, '$1?ver='+ assetsVersion]
+			]
+		});
+		seajs.use('page');
+  
+  $(".map_btn1").click(function(){
+    $(".map1").slideToggle("slow");
+  });
+  $(".map_btn2").click(function(){
+    $(".map2").slideToggle("slow");
+  });
+  
+  var swiperNested1 = new Swiper('.swiper-nested',{
+    mode: 'vertical',
+	
+    slidesPerView: 1,
+  })
+  var swiperParent = new Swiper('.swiper-parent',{
+    
+    loop: true,
+    slidesPerView: 1,
+	
+  })
+  var swiperTwo = new Swiper('.swiper-two',{
+    
+    loop: true,
+    slidesPerView: 1
+  });
+</script>
+</body>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent2");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(116.437607,39.938068);//定义一个中心点坐标
+        map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+                        }
+    
+    //标注点数组
+    var markerArr = [{title:"上坐家居设计体验馆",content:"上坐家居体验馆（皇家粮仓店）",point:"116.437571|39.938137",isOpen:0,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+</html>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent1");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(116.437607,39.938068);//定义一个中心点坐标
+        map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+                        }
+    
+    //标注点数组
+    var markerArr = [{title:"上坐家居设计体验馆",content:"上坐家居体验馆（皇家粮仓店）",point:"116.437571|39.938137",isOpen:0,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+</script>

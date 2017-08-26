@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" name="Design By BAI">
+        <title>加加流量平台-活动管理-创建活动</title>
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/calendar-2.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/jquery.pagination.min.js"></script>
+        <link rel="stylesheet" href="css/act.css"/>
+        <link rel="stylesheet" href="css/calendar.css" />
+        <link rel="stylesheet" type="text/css" href="css/pagination.css" media="screen">
+    </head>
+    <body>
+    <header>
+        <div id="top">
+            <p>欢迎！<span>某某公司名称</span><a href="login.html">退出</a></p>
+        </div>
+    </header>
+    <nav>
+    <div id="nav_inner">
+        <div id="logo"><a href="index.html"><img src="images/logo.png" height="90" width="180" a /></a></div>
+        <ul id="nav_r">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="order.html">订单查询</a></li>
+            <li><a href="service1.html">业务统计</a></li>
+            <li><a href="personal-1.html">个人中心</a></li>
+            <li><a href="recharge-1.html">充值中心</a></li>
+            <li class="now"><a href="active-1.html">活动管理</a></li>
+        </ul>
+    </div>
+    </nav>
+    <section>
+        <div id="main">
+        <aside>
+        <a href="active-1.html">创建活动</a>
+        <a href="active-list.html">活动列表</a>
+        <p id="water">
+        <span>活动流水</span>
+        &nbsp;&nbsp;<a href="active-receive.html" class="choose" id="water_inner" >领取流水</a><br>
+        &nbsp;&nbsp;<a href="active-exchange.html" id="water_inner">兑换流水</a>
+        </p>
+        </aside>
+        <div id="main_right">
+          <form id="search">
+          <div id="timelist"><label id="timelist-1"><p>活动时间:</p><input type="text" id="month-1" class="year"><div id="day-1"></div></label><label><span id="to">至</span><input type="text" id="month-2" class="year"><div id="day-2"></div></label><label><p>活动类型:</p><select name="pageselect" onchange="self.location.href=options[selectedIndex].value" ><option value="active-1.html">签到</option><option value="active-answer.html">答题</option><option value="active-metting.html">预约</option></select></label>
+         </div>
+         <div><label><p>用户名称:</p><input type="text" /></label><label><p>领取状态:</p><select name="pageselect" onchange="self.location.href=options[selectedIndex].value" ><option value="active-1.html">成功</option><option value="active-answer.html">失败</option><option value="active-metting.html">受理中</option></select></label>
+         </div>            
+          <div id="last_2"><input type="button" value="查询" id="go" /><input type="button" value="导出" id="out" /></div>
+          </form>
+          <div id="biaoge">
+              <table id='list'>
+                  <tr>
+                  <th>&nbsp;</th>
+                  <th>用户名称</th>
+                  <th>手机号</th>
+                  <th>活动名称</th>
+                  <th>活动类型</th>
+                  <th>兑换金额</th>
+                  <th>状态</th>
+                  <th>兑换时间</th>
+                  <th>&nbsp;</th>
+                  </tr>
+                  <tr>
+                      <td>&nbsp;</td>
+                      <td>XXXXXX</td>
+                      <td>13458795126</td>
+                      <td>XXXXXXXXXX</td>
+                      <td>签到</td>
+                      <td>30M</td>
+                      <td>处理中</td>
+                      <td>2016-03-23<br>2016-04-19</td>
+                      <td>&nbsp;</td>
+                  </tr>
+                   <tr>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                  </tr>                  
+                  <tr>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                  </tr>                  
+                  <tr>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                  </tr>
+
+              </table>
+              <div id="page"><p>每页10条，共10页。</p><input type="button" value="刷新" id="refresh" /><div class="M-box3"></div></div>
+         </div>
+        </div>
+        </div>
+    </section>
+     <footer>
+     <div id="footer_inner">
+         <p><a href="#">合作伙伴</a></p>丨<p><a href="#">联系我们</a></p>
+         <p>京ICP备13051795号-2加加流量  版权所有</p>
+     </div>
+ </footer>
+    </body>
+    <script>
+    //日历选择插件
+    $('#day-1').calendar({
+        trigger: '#month-1',
+        width:198,
+        height:198, 
+        zIndex: 999,
+        format: 'yyyy-mm-dd',
+        onSelected: function (view, date, data) {
+            console.log('event: onSelected')
+        },
+        onClose: function (view, date, data) {
+            console.log('event: onClose')
+            console.log('view:' + view)
+            console.log('date:' + date)
+            console.log('data:' + (data || 'None'));
+        }
+    });
+    $('#day-2').calendar({
+        trigger: '#month-2',
+        width:198,
+        height:198,
+        zIndex: 999,
+        format: 'yyyy-mm-dd',
+        onSelected: function (view, date, data) {
+            console.log('event: onSelected')
+        },
+        onClose: function (view, date, data) {
+            console.log('event: onClose')
+            console.log('view:' + view)
+            console.log('date:' + date)
+            console.log('data:' + (data || 'None'));
+        }
+    });
+    </script>
+</html>

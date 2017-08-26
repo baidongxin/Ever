@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>活动专区</title>
+<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0;" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-app-status-bar-style" content="white" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="copyright" content="Copyright (c) 2007-2014 juooo" />
+<link rel="stylesheet" type="text/css" href="public/css/style-min.css?v1.2.32">
+<link rel="stylesheet" type="text/css" href="public/css/alert.css?v1.6">
+<script src="public/js/jquery-1.7.1.min.js"></script> 
+<script src="public/js/TouchSlide.1.1.js"></script>
+<script src="public/js/jquery.lazyload.mini.js"></script> 
+<script src="public/js/base.js?v1.2"></script>
+<script src="public/js/juooostatistics.js"></script>  
+<script src="public/js/jquery.tipswindow-2.2.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(e) {
+        $('.g-nav>ul>li').click(function(e) {
+            $('.g-nav>ul>.nav02>p').css({"border":"none","font-weight":"normal"})
+            $('.g-nav>ul>.nav03>p').css({"border":"none","font-weight":"normal"})
+            $('.g-nav>ul>.nav01>p').css({"border-bottom":"4px #f51f1f solid","font-weight":"bold"})
+            $('#page2').hide()
+            $('#page3').hide()
+            $('#page1').show()
+        });
+        $('.g-nav>ul>.nav02').click(function(e) {
+            $('.g-nav>ul>.nav01>p').css({"border":"none","font-weight":"normal"})
+            $('.g-nav>ul>.nav03>p').css({"border":"none","font-weight":"normal"})
+            $('.g-nav>ul>.nav02>p').css({"border-bottom":"4px #f5a31f solid","font-weight":"bold"})
+            $('#page1').hide()
+            $('#page3').hide()
+            $('#page2').show()
+        });
+        $('.g-nav>ul>.nav03').click(function(e) {
+            $('.g-nav>ul>.nav01>p').css({"border":"none","font-weight":"normal"})
+            $('.g-nav>ul>.nav02>p').css({"border":"none","font-weight":"normal"})
+            $('.g-nav>ul>.nav03>p').css({"border-bottom":"4px #1f9df5 solid","font-weight":"bold"})
+            $('#page1').hide()
+            $('#page2').hide()
+            $('#page3').show()
+			
+        });
+    });
+
+</script>
+</head>
+<body ontouchmove="check_move()">
+<div class="g-mn">
+	<div id="slideBox" class="m-slide">
+	 <div class="bd">
+	 	<ul>
+	 			 			<li>
+	 				<a href="index.php/ticket.html">
+	 				<img  style="vertical-align:middle;"  src="public/image/443.jpg" alt="1" />
+	 				</a>
+	 			</li>
+	 			 			<li>
+	 				<a href="index.php/ticket?sid=13633&city_id=1&venue_id=100">
+	 				<img  style="vertical-align:middle;"  src="public/image/2.jpg" alt="2" />
+	 				</a>
+	 			</li>
+	 			 			<li>
+	 				<a href="javascript:void(0)">
+	 				<img  style="vertical-align:middle;"  src="public/image/3.jpg" alt="3" />
+	 				</a>
+	 			</li>
+	 			 			<li>
+	 				<a href="index.php/ticket?sid=13214&city_id=1&venue_id=115">
+	 				<img  style="vertical-align:middle;"  src="public/image/4.jpg" alt="4" />
+	 				</a>
+	 			</li>
+	 			 			<li>
+	 				<a href="javascript:void(0)">
+	 				<img  style="vertical-align:middle;"  src="public/image/5.jpg" alt="5" />
+	 				</a>
+	 			</li>
+	 			 			<li>
+	 				<a href="javascript:void(0)">
+	 				<img  style="vertical-align:middle;"  src="public/image/6.jpg" alt="6" />
+	 				</a>
+	 			</li>
+	 			 	
+	 	</ul>
+	 </div>
+	 <div class="hd">
+	 	<ul></ul>
+	 </div>
+	</div>
+	<script type="text/javascript">
+		TouchSlide({ 
+			slideCell:"#slideBox",
+			titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+			mainCell:".bd ul", 
+			effect:"leftLoop", 
+			autoPage:true,//自动分页
+			autoPlay:true //自动播放
+		});
+	</script>
+</div>
+
+<nav class="g-nav cf">
+		<ul>
+         <li class="nav01"><p>热门推荐</p></li>
+         <li class="nav02"><p>活动送</p></li>
+         <li class="nav03"><p>购物送</p></li>
+        </ul>
+
+  
+</nav>
+<div class="warp">
+
+
+<!--//////////////////////////////
+///列表开始
+-->
+    <div class="cate_main " id="page1">
+    	     	       <dl class="item cf">
+            <dt><img src="public/image/2.jpg"></dt>
+            <div id="right">
+            <div id="title"><i class="ico ico_time">喝剑南春，领海量流量红包！</i></div>
+        	<div id="shuliang"><i class="ico ico_cost"></i></div>
+            <div id="lingqu"><span class="zhuban">剑南春酒业</span><span class="ico_tab">马上领取</span><span class="dianzan">576</span></div> 
+            <div class="clear"></div>
+                        </div></dl>                                                    
+    	     	       <dl class="item cf">
+            <dt><img src="public/image/2.jpg"></dt>
+            <div id="right">
+            <div id="title"><i class="ico ico_time">喝剑南春，领海量流量红包！</i></div>
+        	<div id="shuliang"><i class="ico ico_cost"></i></div>
+            <div id="lingqu"><span class="zhuban">剑南春酒业</span><span class="ico_tab">马上领取</span><span class="dianzan">57</span></div> 
+            <div class="clear"></div>
+                        </div></dl>                                                    
+    	     	       <dl class="item cf">
+            <dt><img src="public/image/2.jpg"></dt>
+            <div id="right">
+            <div id="title"><i class="ico ico_time">喝剑南春，领海量流量红包！</i></div>
+        	<div id="shuliang"><i class="ico ico_cost"></i></div>
+            <div id="lingqu"><span class="zhuban">剑南春酒业</span><span class="ico_tab">马上领取</span><span class="dianzan">5</span></div> 
+            <div class="clear"></div>
+                        </div></dl>                                                    
+</div>
+    <div class="cate_main " id="page2">
+    	     	       <dl class="item cf">
+            <dt><img src="public/image/3.jpg"></dt>
+            <div id="right">
+            <div id="title"><i class="ico ico_time">喝剑南春，领海量流量红包！</i></div>
+        	<div id="shuliang"><i class="ico ico_cost"></i></div>
+            <div id="lingqu"><span class="zhuban">剑南春酒业</span><span class="ico_tab">马上领取</span><span class="dianzan">576</span></div> 
+            <div class="clear"></div>
+                        </div></dl>                                                    
+    	     	       <dl class="item cf">
+            <dt><img src="public/image/3.jpg"></dt>
+            <div id="right">
+            <div id="title"><i class="ico ico_time">喝剑南春，领海量流量红包！</i></div>
+        	<div id="shuliang"><i class="ico ico_cost"></i></div>
+            <div id="lingqu"><span class="zhuban">剑南春酒业</span><span class="ico_tab">马上领取</span><span class="dianzan">576</span></div> 
+            <div class="clear"></div>
+                        </div></dl>                                                    
+    	     	       <dl class="item cf">
+            <dt><img src="public/image/3.jpg"></dt>
+            <div id="right">
+            <div id="title"><i class="ico ico_time">喝剑南春，领海量流量红包！</i></div>
+        	<div id="shuliang"><i class="ico ico_cost"></i></div>
+            <div id="lingqu"><span class="zhuban">剑南春酒业</span><span class="ico_tab">马上领取</span><span class="dianzan">576</span></div> 
+            <div class="clear"></div>
+                        </div></dl>                                                    
+</div>
+    <div class="cate_main " id="page3">
+    	     	       <dl class="item cf">
+            <dt><img src="public/image/443.jpg"></dt>
+            <div id="right">
+            <div id="title"><i class="ico ico_time">喝剑南春，领海量流量红包！</i></div>
+        	<div id="shuliang"><i class="ico ico_cost"></i></div>
+            <div id="lingqu"><span class="zhuban">剑南春酒业</span><span class="ico_tab">马上领取</span><span class="dianzan">576</span></div> 
+            <div class="clear"></div>
+                        </div></dl>                                                    
+    	     	       <dl class="item cf">
+            <dt><img src="public/image/443.jpg"></dt>
+            <div id="right">
+            <div id="title"><i class="ico ico_time">喝剑南春，领海量流量红包！</i></div>
+        	<div id="shuliang"><i class="ico ico_cost"></i></div>
+            <div id="lingqu"><span class="zhuban">剑南春酒业</span><span class="ico_tab">马上领取</span><span class="dianzan">576</span></div> 
+            <div class="clear"></div>
+                        </div></dl>                                                    
+    	     	       <dl class="item cf">
+            <dt><img src="public/image/443.jpg"></dt>
+            <div id="right">
+            <div id="title"><i class="ico ico_time">喝剑南春，领海量流量红包！</i></div>
+        	<div id="shuliang"><i class="ico ico_cost"></i></div>
+            <div id="lingqu"><span class="zhuban">剑南春酒业</span><span class="ico_tab">马上领取</span><span class="dianzan">576</span></div> 
+            <div class="clear"></div>
+                        </div></dl>                                                    
+</div>
+  <div class="logo"><img src="public/image/logo_un.png"><img src="public/image/logo_wo.png"><img src="public/image/logo_tel.png"><img src="public/image/logo_wechat.png"><img src="public/image/logo_qq.png"></div>  </div>
+<body>
+
+</body>
+</html>

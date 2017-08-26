@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" name="Design By BAI">
+        <title>加加流量平台-活动管理-创建活动</title>
+        <link rel="stylesheet" href="css/act.css"/>
+        <link rel="stylesheet" href="css/calendar.css" />
+        <link rel="stylesheet" type="text/css" href="css/pagination.css" media="screen">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/calendar-2.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/jquery.pagination.min.js"></script>
+        <script src="js/echarts.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+    <header>
+        <div id="top">
+            <p>欢迎！<span>某某公司名称</span><a href="login.html">退出</a></p>
+        </div>
+    </header>
+    <nav>
+    <div id="nav_inner">
+        <div id="logo"><a href="index.html"><img src="images/logo.png" height="90" width="180" a /></a></div>
+        <ul id="nav_r">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="order.html">订单查询</a></li>
+            <li><a href="service1.html">业务统计</a></li>
+            <li><a href="personal-1.html">个人中心</a></li>
+            <li><a href="recharge-1.html">充值中心</a></li>
+            <li class="now"><a href="active-1.html">活动管理</a></li>
+        </ul>
+    </div>
+    </nav>
+    <section>
+        <div id="main">
+        <aside>
+        <a href="active-1.html" class="choose">创建活动</a>
+        <a href="active-list.html">活动列表</a>
+        <p id="water">
+        <span>活动流水</span>
+        &nbsp;&nbsp;<a href="active-receive.html">领取流水</a><br>
+        &nbsp;&nbsp;<a href="active-exchange.html">兑换流水</a>
+        </p>
+        </aside>
+        <div id="main_right">
+         <form id="search">
+         <div>
+         <label><p><span>*</span>活动类型:</p><select name="pageselect" onchange="self.location.href=options[selectedIndex].value" ><option value="active-metting.html">预约</option><option value="active-answer.html">答题</option><option value="active-1.html">签到</option></select></label><label><p>清零时间:</p><input type="text" ></label>
+         </div>
+         <div><label><p><span>*</span>分享标题:</p><input type="tel"><div id="not">(最多输入60个字)</div></label><label><p><span>*</span>活动Banner:</p><div class="file-box"><lable action="" method="post" enctype="multipart/form-data"><input type='text' name='textfield-1' id='textfield-1' class='txt' />&nbsp;<input type='button' class='btn' value='浏览...' /><input type="file" name="fileField" class="file" id="fileField" onchange="document.getElementById('textfield-1').value=this.value" /></lable></div><div id="not">(像素大小750px*370px,文件大小100KB以内)</div></label></div>
+         <div id="timelist"><label id="timelist-1"><p><span>*</span>活动时间:</p><input type="text" id="month-1" class="year"><div id="day-1"></div></label><label><span id="to">至</span><input type="text" id="month-2" class="year"><div id="day-2"></div></label><label><p><span>*</span>分享LOGO:</p><div class="file-box"><lable action="" method="post" enctype="multipart/form-data"><input type='text' name='textfield-2' id='textfield-2' class='txt' />&nbsp;<input type='button' class='btn' value='浏览...' /><input type="file" name="fileField" class="file" id="fileField" onchange="document.getElementById('textfield-2').value=this.value" /></lable></div><div id="not">(像素大小120px*120px，文件大小30KB以内)</div></label>
+        </div>        
+         <div id="timelist"><label id="timelist-1"><p><span>*</span>领取额度:</p><input type="text" id="month-1" class="year"><div id="not">最低1M，最高不限</div></label><label><span id="to">至</span><input type="text" id="month-2" class="year"></label><label><p><span>*</span>二维码:</p><div class="file-box"><lable action="" method="post" enctype="multipart/form-data"><input type='text' name='textfield-3' id='textfield-3' class='txt' />&nbsp;<input type='button' class='btn' value='浏览...' /><input type="file" name="fileField" class="file" id="fileField" onchange="document.getElementById('textfield-3').value=this.value" /></lable></div><div id="not">(像素大小200px*200px，文件大小30KB以内)</div></label></div> 
+         <div id="share"><label><p><span>*</span>活动描述:</p><textarea maxlength="350"></textarea><div id="not">(不能超过350个字)</div></label><label><p><span>*</span>充值方式:</p><select><option>直接充值</option><option>进入公众号充值</option><option>不充值</option></select></label></div>        
+         <div id="last"><p><span>XXXX</span>不能为空!</p><input type="submit" value="创&nbsp;&nbsp;&nbsp;&nbsp;建" id="go"/></div>
+         </form>
+        </div>
+        </div>
+    </section>
+     <footer>
+     <div id="footer_inner">
+         <p><a href="#">合作伙伴</a></p>丨<p><a href="#">联系我们</a></p>
+         <p>京ICP备13051795号-2加加流量  版权所有</p>
+     </div>
+ </footer>
+    </body>
+    <script>
+    //日历选择插件
+    $('#day-1').calendar({
+        trigger: '#month-1',
+        width:198,
+        height:198, 
+        zIndex: 999,
+        format: 'yyyy-mm-dd',
+        onSelected: function (view, date, data) {
+            console.log('event: onSelected')
+        },
+        onClose: function (view, date, data) {
+            console.log('event: onClose')
+            console.log('view:' + view)
+            console.log('date:' + date)
+            console.log('data:' + (data || 'None'));
+        }
+    });
+    $('#day-2').calendar({
+        trigger: '#month-2',
+        width:198,
+        height:198,
+        zIndex: 999,
+        format: 'yyyy-mm-dd',
+        onSelected: function (view, date, data) {
+            console.log('event: onSelected')
+        },
+        onClose: function (view, date, data) {
+            console.log('event: onClose')
+            console.log('view:' + view)
+            console.log('date:' + date)
+            console.log('data:' + (data || 'None'));
+        }
+    });
+    </script>
+</html>

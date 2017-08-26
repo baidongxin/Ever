@@ -1,0 +1,1 @@
+define(function(require){var app=require("main1");app.showPage(".page-index"),require("main2").init(),require("main3").init(),require("main4").init(),require("main5").init(),require("main6").init(),require("main7").init(),console.log("\n运行成功！"),$(".app-footer").after($("input[data-weixin-callback]"))});

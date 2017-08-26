@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8" name="Design By BAI">
+    <title>加加流量平台-充值中心-充值记录</title>
+    <link rel="stylesheet" href="css/chongzhi.css"/>
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" type="text/css" href="css/pagination.css" media="screen">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/calendar.js"></script> 
+    <script src="js/jquery.pagination.min.js"></script>
+    <script src="js/main.js"></script>
+    </head>
+    <body>
+    <header>
+        <div id="top">
+            <p>欢迎！<span>某某公司名称</span><a href="login.html">退出</a></p>
+        </div>
+    </header>
+    <nav>
+    <div id="nav_inner">
+        <div id="logo"><a href="index.html"><img src="images/logo.png" height="90" width="180" a /></a></div>
+        <ul id="nav_r">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="order.html">订单查询</a></li>
+            <li><a href="service1.html">业务统计</a></li>
+            <li><a href="personal-1.html">个人中心</a></li>
+            <li class="now"><a href="recharge-1.html">充值中心</a></li>
+            <li><a href="active-1.html">活动管理</a></li>
+        </ul>
+    </div>
+    </nav>
+    <section>
+    <div id="main">
+    <aside>
+        <div id="water">
+            <h3>流量充值</h3>
+            <p id="water_inner">&nbsp;<a href="recharge-1.html">批量充值</a></p>
+            <p id="water_inner">&nbsp;<a href="flow-single.html">单个充值</a></p>
+            <p id="water_inner">&nbsp;<a href="flow-list.html" class="choose">充值记录</a></p>
+        </div>        
+        <div id="water">
+            <h3>话费充值</h3>
+            <p>&nbsp;<a href="bill-all.html">批量充值</a></p>
+            <p>&nbsp;<a href="bill-single.html">单个充值</a></p>
+            <p>&nbsp;<a href="bill-list.html">充值记录</a></p>
+        </div>        
+        <div id="water">
+            <h3>流量卡密</h3>
+            <p>&nbsp;<a href="#">卡密生成</a></p>
+            <p>&nbsp;<a href="#">卡密充值</a></p>
+            <p>&nbsp;<a href="#">卡密查询</a></p>
+            <p>&nbsp;<a href="#">卡密充值查询</a></p>
+        </div>
+    </aside>
+    <article>
+        <div id="search">
+        <div>
+            <label><p>手机号码:</p><input type="tel" placeholder="请输入11位手机号码"/ maxlength="10" ></label>
+            <label>
+            <p>充值状态:</p><select ><option>全部</option><option>成功</option><option>失败</option><option>处理中</option></select>
+            </label>
+            </div>      
+        <div>
+            <label><p>充值批次:</p><input type="text"></label>
+            <label><p>订单号:</p><input type="text"></label>
+        </div>
+        <div>
+            <label><p>起始时间:</p><input type="text" id="month-1" class="year"><div id="day-1"></div></label>
+            <label><p>终止时间:</p><input type="text" id="month-2" class="year"><div id="day-2"></div></label>
+        </div>          
+        <div id="last">
+        <input type="button" value="查询" id="go" /><input type="button" value="导出" id="out" />
+        </div>
+        </div>
+        <div id="biaoge">
+            <table id='list'>
+                <tr>
+                <th>&nbsp;</th>
+                <th>手机号码</th>
+                <th>流量规格</th>
+                <th>充值状态</th>
+                <th>订单号</th>
+                <th>充值批次</th>
+                <th>充值时间</th>
+                <th>&nbsp;</th>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>18611356984</td>
+                    <td>20M</td>
+                    <td>成功</td>
+                    <td width="130" style="word-wrap:break-word;word-break:break-all;">80001018922718090201603220642385910</td>
+                    <td>LL2016042501</td>
+                    <td>2016-03-23<br>10:40:13</td>
+                    <td>&nbsp;</td>
+                </tr>                
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>18611356984</td>
+                    <td>20M</td>
+                    <td>失败</td>
+                    <td width="130" style="word-wrap:break-word;word-break:break-all;">80001018922718090201603220642385910</td>
+                    <td>LL2016042501</td>
+                    <td>2016-03-23<br>10:40:13</td>
+                    <td>&nbsp;</td>
+                </tr>                
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>18611356984</td>
+                    <td>20M</td>
+                    <td>处理中</td>
+                    <td width="130" style="word-wrap:break-word;word-break:break-all;">80001018922718090201603220642385910</td>
+                    <td>LL2016042501</td>
+                    <td>2016-03-23<br>10:40:13</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+            <div id="page"><p>每页10条，共10页。</p><input type="button" value="刷新" id="refresh" /><div class="M-box3"></div></div>
+        </div>
+    </article>
+    </div>
+    </section>
+    <footer>
+        <div id="footer_inner">
+            <p><a href="#">合作伙伴</a></p>丨<p><a href="#">联系我们</a></p>
+            <p>京ICP备13051795号-2加加流量  版权所有</p>
+        </div>
+    </footer>
+    <script>
+        $('#day-1').calendar({
+            trigger: '#month-1',
+            width:198,
+            height:200,
+            zIndex: 999,
+            format: 'yyyy-mm-dd',
+            onSelected: function (view, date, data) {
+                console.log('event: onSelected')
+            },
+            onClose: function (view, date, data) {
+                console.log('event: onClose')
+                console.log('view:' + view)
+                console.log('date:' + date)
+                console.log('data:' + (data || 'None'));
+            }
+        });
+        $('#day-2').calendar({
+            trigger: '#month-2',
+            width:198,
+            height:200,
+            zIndex: 999,
+            format: 'yyyy-mm-dd',
+            onSelected: function (view, date, data) {
+                console.log('event: onSelected')
+            },
+            onClose: function (view, date, data) {
+                console.log('event: onClose')
+                console.log('view:' + view)
+                console.log('date:' + date)
+                console.log('data:' + (data || 'None'));
+            }
+        });
+    </script>
+    </body>
+</html>

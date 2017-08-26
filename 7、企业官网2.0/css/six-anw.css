@@ -1,0 +1,74 @@
+/* 
+* @Author: BAI
+* @Date:   2016-05-06 12:17:32
+* @Last modified by:   BAI
+* @Last Modified time: 2016-05-09 18:13:38
+*/
+#search h2{
+    padding-top: 30px;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: normal;
+    text-align: center;
+    color: #00bcd4;
+}
+#search h2 span{
+    color: red;
+}
+#search #question textarea{
+    width: 238px;
+    height: 160px;
+    padding:5px;
+    border: 1px #d7d7d7 solid;
+    font-size: 14px;
+    line-height: 16px;
+    color: #333;
+    outline: none;
+    vertical-align: middle;
+    resize: none;
+    margin-right: 20px;
+}
+#search #question #qst_inner div{
+    padding-bottom: 20px;
+}
+#search #question #qst_inner{
+    padding: 20px 0;
+}
+#search #question #qst_inner div:last-child{
+    padding-bottom: 0;
+}
+#search #question .qst_btn{
+    width:20px;
+    height: 20px;
+    margin-left: 10px;
+    border: 1px #d7d7d7 solid;
+    line-height: 40px;
+    color: #333;
+    outline: none;
+    vertical-align: middle;
+}
+#qst_left{
+    float: left;
+}
+#right{
+    float: right;
+}
+#search #addandreduce{
+    margin: 20px 0;
+}
+#search #addandreduce input{
+    vertical-align: middle;
+    width: 200px;
+    margin-right: 50px;
+    font-size: 14px;
+    padding-left: 0;
+    line-height: 38px;
+    height: 38px;
+    color: #fff;
+    background: #00bcd4;
+    border:1px #00bcd4 solid;
+    outline: none;
+}
+
+
+
